@@ -1,0 +1,426 @@
+:root {
+  --red: hsl(0, 94%, 66%);
+  --blue: hsl(231, 69%, 60%);
+  --black: #444;
+  --grey: #999;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+main {
+  padding: 0 5rem;
+}
+
+section:not(:nth-child(1)) {
+  margin: 8rem auto 0 auto;
+}
+
+button {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 0.4rem;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: -1px 1px 35px 3px rgba(0, 0, 0, 0.1);
+  transition: 100ms;
+  cursor: pointer;
+  padding: 0.7rem 1.2rem;
+}
+
+p {
+  color: var(--grey);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.button-red {
+  border-color: var(--red);
+  background-color: var(--red);
+}
+
+.button-blue {
+  border-color: var(--blue);
+  background-color: var(--blue);
+}
+
+.button-grey {
+  color: var(--black);
+  background-color: #eee;
+}
+
+.button-red:hover {
+  background-color: white;
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+.button-blue:hover {
+  background-color: white;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.button-grey:hover {
+  border: 1px solid var(--black);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+
+#nav-buttons {
+  display: flex;
+  gap: 2rem;
+  font-size: 14px;
+}
+
+#nav-buttons ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+#nav-buttons ul a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+#nav-buttons #login-button {
+  padding: 0.7rem 2.5rem;
+}
+
+#hero {
+  display: flex;
+  margin-top: 5rem;
+}
+
+#hero-Lside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#hero-Lside h1 {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 0 5rem 0 0;
+}
+
+#hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+#hero-Rside {
+  position: relative;
+}
+
+#hero-sphere {
+  position: absolute;
+  left: 30%;
+  bottom: 5%;
+  z-index: -1;
+  background-color: #7585d3;
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 7rem;
+  border-bottom-left-radius: 7rem;
+}
+
+#features h2,
+#extensions h2,
+#questions h2 {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#features p,
+#features-select-buttons,
+#extensions #extensions-p-description,
+#questions #questions-p-description,
+#questions #questions-ul {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+#features-select-buttons {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  width: 55%;
+}
+
+.features-select-button {
+  color: var(--grey);
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  padding: 0.9rem 1.2rem;
+}
+
+.features-select-button.active {
+  border-bottom: 2px solid #f95a5a;
+}
+
+#features-content {
+  display: flex;
+}
+
+#features-content-Lside {
+  flex: 1.3;
+  position: relative;
+}
+
+#features-sphere {
+  background-color: #7585d3;
+  width: 900px;
+  height: 250px;
+  position: absolute;
+  z-index: -1;
+  bottom: -10%;
+  right: 30%;
+
+  border-bottom-right-radius: 7rem;
+}
+
+#features-content-Rside {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 4rem 4rem 4rem;
+}
+
+#features-content-Rside p {
+  width: 100%;
+  text-align: left;
+}
+
+#extensions-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.extensions-card {
+  box-shadow: 1px 10px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.2rem 1rem;
+  border-radius: 1rem;
+}
+
+.extensions-card:nth-child(2) {
+  transform: translateY(2rem);
+}
+
+.extensions-card:nth-child(3) {
+  transform: translateY(4rem);
+}
+
+.extensions-img-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.extensions-img-content h3 {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.extensions-img-content p {
+  font-size: 14px;
+}
+
+.extensions-dotted-border {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.extensions-dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: #ccc;
+}
+
+#questions-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+}
+
+#questions #questions-ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+
+#questions-ul .questions-li {
+  border-top: 1px solid #ccc;
+  padding: 1rem 0;
+  text-align: start;
+  position: relative;
+  cursor: pointer;
+}
+
+#questions-ul .questions-li::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  border: 4px solid var(--blue);
+  border-top: 0px;
+  border-left: 0px;
+  right: 2%;
+  top: 15px;
+  transform: rotate(45deg);
+}
+
+#questions-ul .questions-li:nth-last-child(1) {
+  border-bottom: 1px solid #ccc;
+}
+
+#questions-ul .questions-li p {
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#contact {
+  background-color: var(--blue);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+#contact p {
+  text-align: center;
+  color: white;
+  letter-spacing: 0.3rem;
+}
+
+#contact h2 {
+  color: white;
+  text-align: center;
+  width: 40%;
+}
+
+#contact input {
+  border: none;
+  border-radius: 0.3rem;
+  width: 12rem;
+  height: 1.8rem;
+}
+
+#contact button {
+  padding: 0.5rem 1rem;
+}
+
+footer {
+  background-color: #242946;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5rem;
+}
+
+footer ul {
+  display: flex;
+  gap: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer-buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#footer-media {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#footer-media img {
+  cursor: pointer;
+}
+
+#scroll-up {
+  position: fixed;
+  z-index: 1000;
+  border-radius: 50%;
+  height: 2.5rem;
+  left: 90%;
+  bottom: 10%;
+}
+
+#scroll-up::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  border: 4px solid white;
+  border-top: 0px;
+  border-left: 0px;
+  right: 30%;
+  top: 40%;
+  transform: rotate(225deg);
+}
+
+#scroll-up:hover::before {
+  border-color: var(--red);
+}
